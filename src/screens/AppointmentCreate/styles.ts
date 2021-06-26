@@ -33,7 +33,8 @@ export const styles = StyleSheet.create({
     image: {
         width: 64,
         height: 64,
-        backgroundColor: theme.colors.secondary50,
+        backgroundColor: theme.colors.secondary40,
+        borderColor: theme.colors.secondary50,
         borderWidth: 1,
         borderRadius: 8
     },
@@ -52,5 +53,14 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         fontFamily: theme.fonts.text500,
         color: theme.colors.highlight
+    },
+    caracteresLimit: {
+        fontFamily: theme.fonts.text400,
+        fontSize: 13,
+        color: theme.colors.highlight
+    },
+    footer: {
+        marginVertical: 20,
+        marginBottom: 56
     }
 })

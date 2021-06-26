@@ -13,9 +13,6 @@ export const styles = StyleSheet.create({
         marginTop: getStatusBarHeight() + 26, //A função retorna o tamanho da status bar, que no iphone é maior q no android
         marginBottom: 42,
     },
-    content: {
-        marginTop: 42
-    },
     matches: {
         marginTop: 24,
         marginLeft: 24

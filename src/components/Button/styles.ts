@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         fontFamily: theme.fonts.text500,
         textAlign: 'center'
+    
     },
     iconWrapper: {
         width: 56,

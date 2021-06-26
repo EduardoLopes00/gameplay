@@ -7,6 +7,8 @@ import { Background } from './src/components/Background';
 
 import { StatusBar } from 'react-native';
 
+import { AuthProvider } from './src/hooks/auth'
+
 import { Routes } from './src/routes';
 import { Home } from './src/screens/Home';
 
@@ -30,7 +32,9 @@ export default function App(){
         translucent
       />
       
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </Background>
   );
 }

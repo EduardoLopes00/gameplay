@@ -49,7 +49,7 @@ export function Home() {
 
 
   function handleCategorySelect(categoryId: string): void {
-    categoryId === category ? setCategory('') : setCategory(categoryId)
+    setCategory(categoryId)
   }
 
   function handleAppointmentDetails(){
@@ -72,25 +72,24 @@ export function Home() {
           setCategory= {handleCategorySelect}
         />
       
-        <View style = {styles.content}>
-          <ListHeader 
-            title="teste"
-            subtitle="teste"
-          />
+        <ListHeader 
+          title="teste"
+          subtitle="teste"
+        />
 
-          <FlatList //Lista mais performática que o scroolView
-              data={appointments}
-              keyExtractor={item => item.id}
-              renderItem={({item}) => (
-              <Appointment data ={item}
-                onPress={handleAppointmentDetails}
-              />
-            )}
-            style={styles.matches}      
-            showsVerticalScrollIndicator={false}
-            ItemSeparatorComponent={() => <ListDivider />}
+        <FlatList //Lista mais performática que o scroolView
+          data={appointments}
+          keyExtractor={item => item.id}
+          renderItem={({item}) => (
+          <Appointment data ={item}
+              onPress={handleAppointmentDetails}
           />
-        </View>
+          )}
+          style={styles.matches}      
+          contentContainerStyle={{paddingBottom: 69}}
+          showsVerticalScrollIndicator={false}
+          ItemSeparatorComponent={() => <ListDivider />}
+        />
     </Background>
   )
 }
