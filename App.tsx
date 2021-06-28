@@ -5,12 +5,14 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 import AppLoading from 'expo-app-loading';
 import { Background } from './src/components/Background';
 
-import { StatusBar } from 'react-native';
+import { StatusBar, LogBox } from 'react-native';
 
 import { AuthProvider } from './src/hooks/auth'
 
 import { Routes } from './src/routes';
 import { Home } from './src/screens/Home';
+
+LogBox.install()
 
 export default function App(){
   const [fontsLoaded] = useFonts({
